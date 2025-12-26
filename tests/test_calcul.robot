@@ -26,6 +26,7 @@ Division par zéro
     Should Be Equal As Numbers   ${result}    0
 
 Calcul circonférence
+    [Tags]  regression
     ${result}=    Multiplication    ${PI}    10
     ${result}=    Multiplication    ${result}    2
     Should Be Equal As Numbers   ${result}    62.8318    0.0001
@@ -35,9 +36,12 @@ Calcul moyenne 2 notes eleve
     Should Be Equal As Numbers   ${moyenne}    13.5
     Log To Console   L'élève ${eleve}[nom] ${eleve}[prenom] a une moyenne de ${moyenne}
 Affichage répertoire
+    [Tags]  regression
     Log To Console   ${\n} Répertoire courant: ${CURDIR}
     Log To Console   ${\n} Répertoire exécution: ${EXECDIR}
     Log To Console   ${\n} Répertoire temporaire: ${TEMPDIR}
 
 comparer ${80} a 80
+    [Tags]  robot:continue-on-failure
     Should Be Equal    ${80}    80
+    Log To Console   Les deux valeurs sont égales 
