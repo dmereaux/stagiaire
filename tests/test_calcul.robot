@@ -30,3 +30,10 @@ Calcul moyenne 2 notes eleve
     ${moyenne}=    Division    ${result}    2
     Should Be Equal As Numbers   ${moyenne}    13.5
     Log To Console   L'élève ${eleve}[nom] ${eleve}[prenom] a une moyenne de ${moyenne}
+Affichage répertoire
+    Log To Console   ${\n} Répertoire courant: ${CURDIR}
+    Log To Console   ${\n} Répertoire exécution: ${EXECDIR}
+    Log To Console   ${\n} Répertoire temporaire: ${TEMPDIR}
+
+comparer ${80} a 80
+    Should Be Equal    ${80}    80
