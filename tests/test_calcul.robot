@@ -1,5 +1,9 @@
 *** Settings ***
 Library    ../librairies/calculette.py
+Test Setup    Log To Console    Début du test 
+Test Teardown    Log To Console    Fin du test
+Suite Setup    Log To Console    Début de la suite de tests
+Suite Teardown    Log To Console    Fin de la suite de tests   
 
 *** Variables ***
 ${PI}    3.14159
