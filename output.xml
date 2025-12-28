@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.11 on darwin)" generated="2025-12-26T20:53:11.021207" rpa="false" schemaversion="5">
+<suite id="s1" name="Stagiaire" source="/Users/dominiquemereaux/code/TP-robotframework/stagiaire">
+<suite id="s1-s1" name="Tests" source="/Users/dominiquemereaux/code/TP-robotframework/stagiaire/tests">
+<suite id="s1-s1-s1" name="Test Calcul" source="/Users/dominiquemereaux/code/TP-robotframework/stagiaire/tests/test_calcul.robot">
+<test id="s1-s1-s1-t1" name="Addition de deux nombres" line="4">
+<kw name="Addition" owner="calculette">
+<msg time="2025-12-26T20:53:11.149884" level="INFO">${result} = 8.0</msg>
+<var>${result}</var>
+<arg>5</arg>
+<arg>3</arg>
+<status status="PASS" start="2025-12-26T20:53:11.149679" elapsed="0.000237"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2025-12-26T20:53:11.150370" level="INFO">Argument types are:
+&lt;class 'float'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${result}</arg>
+<arg>8</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2025-12-26T20:53:11.150205" elapsed="0.000221"/>
+</kw>
+<status status="PASS" start="2025-12-26T20:53:11.149019" elapsed="0.001531"/>
+</test>
+<test id="s1-s1-s1-t2" name="Soustraction de deux nombres" line="7">
+<kw name="Soustraction" owner="calculette">
+<msg time="2025-12-26T20:53:11.151055" level="INFO">${result} = 6.199999999999999</msg>
+<var>${result}</var>
+<arg>10.2</arg>
+<arg>4</arg>
+<status status="PASS" start="2025-12-26T20:53:11.150914" elapsed="0.000159"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2025-12-26T20:53:11.151290" level="INFO">Argument types are:
+&lt;class 'float'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${result}</arg>
+<arg>6.2</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2025-12-26T20:53:11.151171" elapsed="0.000160"/>
+</kw>
+<status status="PASS" start="2025-12-26T20:53:11.150696" elapsed="0.000733"/>
+</test>
+<test id="s1-s1-s1-t3" name="Moyenne de 2 nombres" line="10">
+<kw name="Addition" owner="calculette">
+<msg time="2025-12-26T20:53:11.151889" level="INFO">${result} = 6.0</msg>
+<var>${result}</var>
+<arg>2</arg>
+<arg>4</arg>
+<status status="PASS" start="2025-12-26T20:53:11.151770" elapsed="0.000136"/>
+</kw>
+<kw name="Division" owner="calculette">
+<msg time="2025-12-26T20:53:11.152109" level="INFO">${moyenne} = 3.0</msg>
+<var>${moyenne}</var>
+<arg>${result}</arg>
+<arg>2</arg>
+<status status="PASS" start="2025-12-26T20:53:11.151989" elapsed="0.000133"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2025-12-26T20:53:11.152290" level="INFO">Argument types are:
+&lt;class 'float'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${moyenne}</arg>
+<arg>3</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2025-12-26T20:53:11.152210" elapsed="0.000112"/>
+</kw>
+<status status="PASS" start="2025-12-26T20:53:11.151569" elapsed="0.000824"/>
+</test>
+<status status="PASS" start="2025-12-26T20:53:11.145601" elapsed="0.007013"/>
+</suite>
+<status status="PASS" start="2025-12-26T20:53:11.144836" elapsed="0.008064"/>
+</suite>
+<status status="PASS" start="2025-12-26T20:53:11.022397" elapsed="0.130742"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Stagiaire">Stagiaire</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1" name="Tests">Stagiaire.Tests</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1-s1" name="Test Calcul">Stagiaire.Tests.Test Calcul</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
