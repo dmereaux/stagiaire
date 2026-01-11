@@ -9,6 +9,8 @@ Documentation    Ceci est le fichier test_calcul.robot qui contient des tests po
 ${PI}    3.14159
 @{liste notes}    12    15    14    10    9
 &{eleve}    nom=Dupont    prenom=Jean    
+${nombre_notes}    5
+${total}    0
 *** Test Cases ***
 Addition de deux nombres
     [Documentation]    Teste l'addition de deux nombres entiers.
@@ -61,6 +63,16 @@ test addition avec modele
     7    3    10
     0    0    0
     -2   2    0    
+
+test calcul moyenne liste notes
+    [Documentation]    Teste le calcul de la moyenne d'une liste de notes.
+    FOR    ${note}    IN    @{liste notes}
+        ${total}=    addition    ${total}    ${note}
+    END
+    ${moyenne}=    Division    ${total}    ${nombre_notes}
+    Should Be Equal As Numbers   ${moyenne}    12
+    Log To Console   La moyenne des notes est ${moyenne}
+
 *** Keywords ***
 modele addition
     [Arguments]    ${a}    ${b}  ${expected}    
