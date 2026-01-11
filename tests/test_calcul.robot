@@ -53,3 +53,16 @@ comparer ${80} a 80
     [Tags]  robot:continue-on-failure
     Should Be Equal    ${80}    80
     Log To Console   Les deux valeurs sont égales 
+
+test addition avec modele
+    [Documentation]    Teste l'addition en utilisant un mot-clé modèle.
+    [Template]    modele addition
+    4    6    10
+    7    3    10
+    0    0    0
+    -2   2    0    
+*** Keywords ***
+modele addition
+    [Arguments]    ${a}    ${b}  ${expected}    
+    ${result}=    addition    ${a}    ${b}
+    Should Be Equal As Numbers   ${result}    ${expected}
