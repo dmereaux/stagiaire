@@ -1,6 +1,7 @@
 *** Settings  ***
 Test Teardown   run keyword if test passed  log to console  Bravo! Test réussi.        
 Library    Dialogs
+Library    Screenshot    screenshot_module=wxPython    screenshot_directory=${CURDIR}
 *** Variables  ***
 *** Test Cases  ***
 Concatenation de deux chaînes de caractères
@@ -13,3 +14,4 @@ etape manuelle et recuperation de valeurs
     FOR    ${selection}    IN    @{selections}
         Log To Console    Ma sélection: ${selection}
     END
+    Take Screenshot    photo
