@@ -1,8 +1,10 @@
 *** Settings  ***
 Test Teardown   run keyword if test passed  log to console  Bravo! Test réussi.        
 Library    Dialogs
-Library    Screenshot    screenshot_module=wxPython    screenshot_directory=${CURDIR}
+Library    Screenshot    screenshot_module=wxPython    screenshot_directory=${CURDIR}/screenshots
 Library  String
+Library  OperatingSystem
+Suite Setup  Create Directory    ${CURDIR}/screenshots
 *** Variables  ***
 *** Test Cases  ***
 Concatenation de deux chaînes de caractères
