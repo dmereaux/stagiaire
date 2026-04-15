@@ -5,6 +5,7 @@ Test Teardown    Log To Console    Fin du test : ${TEST NAME} avec le statut ${T
 Suite Setup    Log To Console    Début de la suite de tests
 Suite Teardown    Log To Console    Fin de la suite de tests   
 Documentation    Ceci est le fichier test_calcul.robot qui contient des tests pour la calculette.
+Resource    ../resources/mes_mots_cles.resource
 *** Variables ***
 ${PI}    3.14159
 @{liste notes}    12    15    14    10    9
@@ -72,6 +73,11 @@ test calcul moyenne liste notes
     ${moyenne}=    Division    ${total}    ${nombre_notes}
     Should Be Equal As Numbers   ${moyenne}    12
     Log To Console   La moyenne des notes est ${moyenne}
+
+test plus 10
+    [Documentation]    Teste le mot-clé personnalisé Plus 10.
+    ${result}=    Plus 10    5
+    Should Be Equal As Numbers   ${result}    15
 
 *** Keywords ***
 modele addition
