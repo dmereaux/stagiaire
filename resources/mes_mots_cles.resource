@@ -7,3 +7,12 @@ Plus 10
     Log    addition avec 10    INFO
     ${somme}    Addition    ${valeur}    10
     RETURN    ${somme}
+moyenne 
+    [Arguments]    @{liste}
+    VAR  ${somme}    0
+    ${count}    Get Length  ${liste}
+    FOR    ${element}    IN    @{liste}
+        ${somme}    Addition    ${somme}    ${element}
+    END
+    ${moyenne}    division    ${somme}    ${count}
+    RETURN    ${moyenne}

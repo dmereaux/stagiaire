@@ -78,7 +78,10 @@ test plus 10
     [Documentation]    Teste le mot-clé personnalisé Plus 10.
     ${result}=    Plus 10    5
     Should Be Equal As Numbers   ${result}    15
-
+test moyenne avec liste de notes
+    [Documentation]    Teste le mot-clé personnalisé moyenne avec une liste de notes.
+    ${result}=    moyenne    @{liste notes}
+    Should Be Equal As Numbers   ${result}    12
 *** Keywords ***
 modele addition
     [Arguments]    ${a}    ${b}  ${expected}    
