@@ -11,3 +11,6 @@ test de recherche
 test de recherche avec message d'erreur
     rechercher un produit    ${EMPTY}
     verifier message d'erreur    Aucun produit ne correspond à votre recherche
+verifier lien women visible
+    quand je survole le lien vêtements
+    le lien femmes doit être visible
