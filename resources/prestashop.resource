@@ -7,7 +7,8 @@ ${BROWSER}    Chrome
 ${LOC_CHAMPRECHERCHE}    xpath=//*[@id="search_widget"]/form/input[2]
 ${LOC_RESULTATRECHERCHE}    xpath=//*[@id="js-product-list-top"]/div[1]/p
 ${LOC_MESSAGEERREUR}    xpath=//*[@id="product-search-no-matches"]
-
+${LOC_LIEN_VETEMENTS}    xpath=//*[@id="category-3"]/a
+${LOC_LIEN_FEMMES}    xpath=//*[@id="category-5"]/a
 
 *** Keywords ***
 ouvrir prestashop
@@ -27,4 +28,7 @@ verifier message d'erreur
     [Arguments]    ${message}=Aucun produit ne correspond à votre recherche
     Wait Until Element Is Visible    ${LOC_MESSAGEERREUR}    timeout=5s
     Element Text Should Be  ${LOC_MESSAGEERREUR}    ${message}
-
+quand je survole le lien vêtements
+    Mouse Over    ${LOC_LIEN_VETEMENTS} 
+le lien femmes doit être visible
+    Wait Until Element Is Visible    ${LOC_LIEN_FEMMES}  5
